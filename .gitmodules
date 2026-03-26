@@ -73,3 +73,6 @@
 [submodule "praktika26"]
 	path = praktika26
 	url = https://github.com/kenn1d/-05.02_praktika26.git
+[submodule "praktika27"]
+	path = praktika27
+	url = https://github.com/kenn1d/-05.02_praktika27.git
