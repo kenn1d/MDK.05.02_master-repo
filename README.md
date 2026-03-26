@@ -1,4 +1,3 @@
-# MDK.05.02_master-repo
 # Практические работы по МДК.05.02
 
 <p align="center">
