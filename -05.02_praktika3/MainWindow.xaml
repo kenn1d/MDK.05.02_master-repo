@@ -1,0 +1,105 @@
+﻿<Window x:Class="Chess_Kibanov.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chess_Kibanov"
+        mc:Ignorable="d"
+        Title="Шахматы" Height="450" Width="800" MinHeight="450" MinWidth="800">
+    <Grid>
+        <Grid x:Name="gameBoard" Width="400" Height="400">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Background="White" Width="50" Height="50" Grid.Column="0" MouseDown="SelectTile" Tag="0"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="2" MouseDown="SelectTile" Tag="2"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="4" MouseDown="SelectTile" Tag="4"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="6" MouseDown="SelectTile" Tag="6"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="1" MouseDown="SelectTile" Tag="1"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="3" MouseDown="SelectTile" Tag="3"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="5" MouseDown="SelectTile" Tag="5"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="7" MouseDown="SelectTile" Tag="7"/>
+
+            <Grid Background="White" Width="50" Height="50" Grid.Column="1" Grid.Row="1" MouseDown="SelectTile" Tag="9"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="3" Grid.Row="1" MouseDown="SelectTile" Tag="11"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="5" Grid.Row="1" MouseDown="SelectTile" Tag="13"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="7" Grid.Row="1" MouseDown="SelectTile" Tag="15"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="0" Grid.Row="1" MouseDown="SelectTile" Tag="8"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="2" Grid.Row="1" MouseDown="SelectTile" Tag="10"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="4" Grid.Row="1" MouseDown="SelectTile" Tag="12"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="6" Grid.Row="1" MouseDown="SelectTile" Tag="14"/>
+
+            <Grid Background="White" Width="50" Height="50" Grid.Column="0" Grid.Row="2" MouseDown="SelectTile" Tag="16"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="2" Grid.Row="2" MouseDown="SelectTile" Tag="18"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="4" Grid.Row="2" MouseDown="SelectTile" Tag="20"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="6" Grid.Row="2" MouseDown="SelectTile" Tag="22"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="1" Grid.Row="2" MouseDown="SelectTile" Tag="17"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="3" Grid.Row="2" MouseDown="SelectTile" Tag="19"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="5" Grid.Row="2" MouseDown="SelectTile" Tag="21"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="7" Grid.Row="2" MouseDown="SelectTile" Tag="23"/>
+
+            <Grid Background="White" Width="50" Height="50" Grid.Column="1" Grid.Row="3" MouseDown="SelectTile" Tag="25"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="3" Grid.Row="3" MouseDown="SelectTile" Tag="27"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="5" Grid.Row="3" MouseDown="SelectTile" Tag="29"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="7" Grid.Row="3" MouseDown="SelectTile" Tag="31"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="0" Grid.Row="3" MouseDown="SelectTile" Tag="24"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="2" Grid.Row="3" MouseDown="SelectTile" Tag="26"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="4" Grid.Row="3" MouseDown="SelectTile" Tag="28"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="6" Grid.Row="3" MouseDown="SelectTile" Tag="30"/>
+
+            <Grid Background="White" Width="50" Height="50" Grid.Column="0" Grid.Row="4" MouseDown="SelectTile" Tag="32"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="2" Grid.Row="4" MouseDown="SelectTile" Tag="34"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="4" Grid.Row="4" MouseDown="SelectTile" Tag="36"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="6" Grid.Row="4" MouseDown="SelectTile" Tag="38"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="1" Grid.Row="4" MouseDown="SelectTile" Tag="33"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="3" Grid.Row="4" MouseDown="SelectTile" Tag="35"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="5" Grid.Row="4" MouseDown="SelectTile" Tag="37"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="7" Grid.Row="4" MouseDown="SelectTile" Tag="39"/>
+
+            <Grid Background="White" Width="50" Height="50" Grid.Column="1" Grid.Row="5" MouseDown="SelectTile" Tag="41"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="3" Grid.Row="5" MouseDown="SelectTile" Tag="43"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="5" Grid.Row="5" MouseDown="SelectTile" Tag="45"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="7" Grid.Row="5" MouseDown="SelectTile" Tag="47"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="0" Grid.Row="5" MouseDown="SelectTile" Tag="40"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="2" Grid.Row="5" MouseDown="SelectTile" Tag="42"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="4" Grid.Row="5" MouseDown="SelectTile" Tag="44"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="6" Grid.Row="5" MouseDown="SelectTile" Tag="46"/>
+
+            <Grid Background="White" Width="50" Height="50" Grid.Column="0" Grid.Row="6" MouseDown="SelectTile" Tag="48"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="2" Grid.Row="6" MouseDown="SelectTile" Tag="50"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="4" Grid.Row="6" MouseDown="SelectTile" Tag="52"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="6" Grid.Row="6" MouseDown="SelectTile" Tag="54"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="1" Grid.Row="6" MouseDown="SelectTile" Tag="49"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="3" Grid.Row="6" MouseDown="SelectTile" Tag="51"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="5" Grid.Row="6" MouseDown="SelectTile" Tag="53"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="7" Grid.Row="6" MouseDown="SelectTile" Tag="55"/>
+
+            <Grid Background="White" Width="50" Height="50" Grid.Column="1" Grid.Row="7" MouseDown="SelectTile" Tag="57"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="3" Grid.Row="7" MouseDown="SelectTile" Tag="59"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="5" Grid.Row="7" MouseDown="SelectTile" Tag="61"/>
+            <Grid Background="White" Width="50" Height="50" Grid.Column="7" Grid.Row="7" MouseDown="SelectTile" Tag="63"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="0" Grid.Row="7" MouseDown="SelectTile" Tag="56"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="2" Grid.Row="7" MouseDown="SelectTile" Tag="58"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="4" Grid.Row="7" MouseDown="SelectTile" Tag="60"/>
+            <Grid Background="#FF9A6400" Width="50" Height="50" Grid.Column="6" Grid.Row="7" MouseDown="SelectTile" Tag="62"/>
+        </Grid>
+    </Grid>
+</Window>

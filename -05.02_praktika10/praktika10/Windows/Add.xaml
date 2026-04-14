@@ -1,0 +1,33 @@
+﻿<Window x:Class="praktika10.Windows.Add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:praktika10.Windows"
+        mc:Ignorable="d"
+        Title="Добавить паспорт" Height="625" Width="310" MinHeight="565" MinWidth="310" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="#Имя:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Name" Height="23" Margin="10,36,10,0" TextWrapping="Wrap" Text="Макар" VerticalAlignment="Top"/>
+        <Label Content="#Фамилия:" HorizontalAlignment="Left" Margin="10,64,0,0"  VerticalAlignment="Top" />
+        <TextBox x:Name="FirstName" Height="23" Margin="10,90,10,0" TextWrapping="Wrap" Text="Кибанов" VerticalAlignment="Top"/>
+        <Label Content="#Отчество:" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="LastName" Height="23" Margin="10,144,10,0" TextWrapping="Wrap" Text="Евгеньевич" VerticalAlignment="Top"/>
+        <Label Content="#Паспорт выдан:" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Issued" Height="23" Margin="10,198,10,0" TextWrapping="Wrap" Text="ГУ МВД ПО ПК" VerticalAlignment="Top"/>
+        <Label Content="#Дата выдачи:" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DateOfIssued" Height="23" Margin="10,252,10,0" TextWrapping="Wrap" Text="14.05.2021" VerticalAlignment="Top"/>
+        <Label Content="#Код подразделения:" HorizontalAlignment="Left" Margin="10,280,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DepartmentCode" Height="23" Margin="10,306,10,0" TextWrapping="Wrap" Text="123-123" VerticalAlignment="Top"/>
+        <Label Content="#Серия и номер:" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="SeriesAndNumber" Height="23" Margin="10,360,10,0" TextWrapping="Wrap" Text="12 32 123123" VerticalAlignment="Top"/>
+        <Label Content="#Дата рождения:" HorizontalAlignment="Left" Margin="10,388,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DateOfBirth" Height="23" Margin="10,414,10,0" TextWrapping="Wrap" Text="12.05.2007" VerticalAlignment="Top"/>
+        <Label Content="#Место рождения:" HorizontalAlignment="Left" Margin="10,442,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PlaceOfBirth" Height="23" Margin="10,468,10,0" TextWrapping="Wrap" Text="Г. БЕРЕЗНИКИ ПЕРМСКИЙ КРАЙ" VerticalAlignment="Top"/>
+        <Label Content="#Фото паспорта (ссылка):" HorizontalAlignment="Left" Margin="10,496,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PhotoPassport" Height="23" Margin="10,522,10,0" TextWrapping="Wrap" Text="C:\Users\kenn1d\Documents\Учёба\3 курс\05.02\praktika10\Image\passport.jpg" VerticalAlignment="Top"/>
+
+        <Button x:Name="BthAdd" Click="AddPassport" Content="Добавить" HorizontalAlignment="Right" Margin="0,0,10,10" Width="75" VerticalAlignment="Bottom" Height="25"/>
+    </Grid>
+</Window>

@@ -1,0 +1,182 @@
+﻿@using praktika22.Data.DataBase
+@using praktika22.Data.ViewModell
+@using praktika22.Data.Models
+
+@model VMItems
+
+@{
+	Layout = "_Layout";
+
+	var AllItems = Model.Items;
+	var SortItems = AllItems;
+
+	int categoryType = Model.SelectCategory;
+	string sortType = Context.Request.Query["sort"].ToString();
+	string searchText = Context.Request.Query["search"].ToString();
+
+	if (searchText != "") AllItems = new DBItems().FindItems(searchText);
+	else if (sortType == "asc") AllItems = SortItems.Where(x => x.Category.Id == categoryType).OrderByDescending(x => x.Price);
+	else if (sortType == "desc") AllItems = SortItems.Where(x => x.Category.Id == categoryType).OrderBy(x => x.Price);
+	else AllItems = SortItems.Where(x => x.Category.Id == categoryType);
+
+}
+<div>
+	<select onchange="SelectCategory(this)">
+		<option value="0">
+			Выбрать ...
+		</option>
+		@{
+			foreach (var Category in Model.Categorys) {
+				if (Category.Id == categoryType) {
+					<option selected="selected" value="@Category.Id">@Category.Name</option>
+				}
+				else {
+					<option value="@Category.Id">@Category.Name</option>
+				}
+			}
+		}
+	</select>
+	<input type='button' value='По убыванию' onclick="downPrice()"/>
+	<input type='button' value='По возрастанию' onclick="upPrice()"/>
+	<input type="button" class="basketCount" value="В корзине: 0" />
+</div>
+<h2>Все предметы</h2>
+@{
+	foreach (var item in AllItems)
+	{
+		<div class="item">
+			<img src="@item.Img"/>
+			<div class="basket">
+				<div class="button" id="@item.Id">
+					В корзину
+				</div>
+				<form class="form">
+					<div class="count">
+						<input class="button min" value="-">
+						<input disabled class="text" value="1">
+						<input class="button max" value="+"/>
+					</div>
+				</form>
+				
+			</div>
+			<div class="data">
+				<h3>Модель: @item.Name</h3>
+				<p>Цена: @item.Price.ToString("c")</p>
+				<p>Категория: @item.Category.Name</p>
+				<p>Описание: @item.Description</p>
+			</div>
+		</div>
+	}
+}
+
+<script>
+	
+	let counter = 0;
+
+	// при нажатии на кнопку, находящуюся в корзине и находящуюся в предмете
+	$(".item").children(".basket").children(".button").click(function() {
+		// показываем элемент с классом count
+		$(this).parent().children(".form").children(".count").show();
+		// скрываем кнопку
+		$(this).hide();
+		counter++;
+		$(".basketCount").val(`В корзине: ${counter}`);
+		// вызываем AJAX
+		$.ajax({
+			// контроллер выполнения и метод вызываемый в нём
+			url: '@Url.Action("Basket", "Items")',
+			// тд которые мы отправляем
+			contentType: "application/json; charset=utf-8",
+			// передаём id предмета
+			data: { idItem: $(this).attr('id') },
+			// тд, ожидаемых от сервера
+			dataType: "json",
+			// функция успешного выполнения
+			success: SeccessBasket,
+			// не успешного
+			error: AjaxError
+		});
+	});
+
+	// действие на кнопку "-"
+	$(".count").children(".min").click(function() {
+		// получаем id предмета
+		var ClipboardItem = $(this).closest(".basket").children(".button").attr("id");
+		// получаем кол-во
+		var CountQueuingStrategy = parseInt($(this).parent().children(".text").val());
+		// уменьшаем кол-во
+		var idItem = ClipboardItem;
+		var count = CountQueuingStrategy;
+		count--;
+		// Кнопка счётчика корзины
+		counter--;
+		$(".basketCount").val(`В корзине: ${counter}`);
+		// если кол-во 0
+		if (count == 0){
+			// показываем кнопку
+			$(this).parent().parent().parent().children(".button").show();
+			// срываем каунтер
+			$(this).parent().parent().children(".count").hide();
+		}
+		else {
+			// изменяем текст
+			$(this).parent().children(".text").val(count);
+		}
+
+		$.ajax({
+			url: '@Url.Action("BasketCount", "Items")',
+			contentType: "application/json; charset=utf-8",
+			data: { idItem: idItem, count: count },
+			dataType: "json",
+			success: SeccessBasket,
+			error: AjaxError
+		});
+	});
+
+	// действие на кнопку "+"
+	$(".count").children(".max").click(function() {
+		var ClipboardItem = $(this).closest(".basket").children(".button").attr("id");
+		var CountQueuingStrategy = parseInt($(this).parent().children(".text").val());
+		var idItem = ClipboardItem;
+		var count = CountQueuingStrategy;
+		count++;
+		counter++;
+		$(".basketCount").val(`В корзине: ${counter}`);
+		$(this).parent().children(".text").val(count);
+
+		// вызываем AJAX
+		$.ajax({
+			url: '@Url.Action("BasketCount", "Items")',
+			contentType: "application/json; charset=utf-8",
+			data: { idItem: idItem, count: count },
+			dataType: "json",
+			success: SeccessBasket,
+			error: AjaxError
+		});
+	});
+
+	function SeccessBasket(data) {
+		console.log(data);
+	}
+
+	function AjaxError() {
+		console.log("Ошибка выполнения ajax");
+	}
+
+	function SelectCategory(sender) {
+		window.location = "/Items/List?id=" + sender.value;
+	}
+
+	function downPrice() {
+		window.location = "/Items/List?id=@Model.SelectCategory&sort=asc";
+	}
+
+	function upPrice() {
+		window.location = "/Items/List?id=@Model.SelectCategory&sort=desc";
+	}
+
+	function search(event, sender) {
+		if(event.key === 'Enter')
+			window.location = "/Items/List?search=" + sender.value;
+	}
+</script>

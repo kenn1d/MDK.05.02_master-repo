@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Click="openKino" Content="Кинотеатр" Height="25" Margin="10,25,0,0" Background="#FF90FF5F" BorderBrush="#FF90FF5F" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80"/>
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0,55,0,0"/>
+        <Button Click="openAfisha" Content="Афиша" Height="25" Margin="100,25,0,0" Background="#FF90FF5F" BorderBrush="#FF90FF5F" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80"/>
+        <Button Click="openBilet" Content="Билеты" Height="25" Margin="190,25,0,0" Background="#FF90FF5F" BorderBrush="#FF90FF5F" Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80"/>
+    </Grid>
+</Window>

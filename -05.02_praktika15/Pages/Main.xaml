@@ -1,0 +1,32 @@
+﻿<Page x:Class="praktika15.Pages.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika15.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Main">
+
+    <Grid>
+        <Grid Height="50" VerticalAlignment="Top" Background="#FFA0A0A0">
+            <Image Width="30" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left"
+                   Margin="10" Source="/Images/icon.png"/>
+            <Label Content="Учёт входящих и исходящих документов"
+                   Foreground="White" VerticalAlignment="Center"
+                   HorizontalContentAlignment="Center" FontSize="20"
+                   FontWeight="Bold"/>
+            <Button Content="Выйти" Click="Exit" Width="75" Height="25" VerticalAlignment="Top"
+                    HorizontalAlignment="Right" Margin="10" Background="White"/>
+            <Button Content="Вперёд" Click="Go" Width="75" Height="25" VerticalAlignment="Top"
+                HorizontalAlignment="Right" Margin="0,10,90,0" Background="White"/>
+        </Grid>
+        
+        <ScrollViewer Margin="10,60,10,55">
+            <StackPanel x:Name="Parent"/>
+        </ScrollViewer>
+            
+        <Button Content="Добавить" Click="Add" Width="75" Height="25" VerticalAlignment="Bottom"
+                HorizontalAlignment="Left" Margin="10" Background="White"/>
+    </Grid>
+</Page>

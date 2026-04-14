@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="praktika9.Elements.BookInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:praktika9.Elements"
+             mc:Ignorable="d"
+             d:DesignWidth="800">
+    <Grid Height="100" Background="#FF6AADED" Margin="0,0,0,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="tbName" Text="Наименование: " Margin="10,10,9.8,0" VerticalAlignment="Top"
+                   Foreground="White" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <TextBlock x:Name="tbGenre" Text="Жанр: " Margin="10,36,9.9,10" Foreground="White" TextWrapping="Wrap"/>
+        <TextBlock x:Name="tbAuthor" Text="Автор: " Margin="9.2,36,9.8,10" Foreground="White" TextWrapping="Wrap" Grid.Column="1"/>
+    </Grid>
+</UserControl>

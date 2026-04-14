@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="praktika15.Elements.ItemUser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:praktika15.Elements"
+             mc:Ignorable="d">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Наименование" FontWeight="Bold" VerticalAlignment="Top"
+            Grid.Column="0" Margin="10"/>
+        <Label x:Name="lUser" Content="Ответственный: Иванов И.И." VerticalAlignment="Top"
+            Grid.Column="0" Margin="10, 35"/>
+        <Label Content="Операции" FontWeight="Bold" VerticalAlignment="Top" HorizontalContentAlignment="Right"
+            Grid.Column="1" Margin="10"/>
+
+        <Button Content="Изменить" Click="EditDocument" Margin="0, 35, 120, 0" Width="100" Height="25"
+             Background="White" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <Button Content="Удалить" Click="DeleteDocument" Margin="0, 35, 10, 0" Width="100" Height="25"
+             Background="White" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+
+    </Grid>
+</UserControl>

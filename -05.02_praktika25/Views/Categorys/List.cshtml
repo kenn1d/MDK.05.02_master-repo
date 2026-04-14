@@ -1,0 +1,16 @@
+﻿@using praktika22.Data.Models
+
+@model IEnumerable<Categorys>
+@{
+	Layout = "_Layout";
+}
+<h2>Все категории</h2>
+@{
+	foreach (var item in Model)
+	{
+		<div class="item">
+			<h2>@item.Name</h2>
+			<p>Описание: @item.Description</p>
+		</div>
+	}
+}

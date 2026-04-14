@@ -1,0 +1,22 @@
+﻿<Page x:Class="praktika11.Pages.Timer"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika11.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="410" d:DesignWidth="782"
+      Title="Timer">
+
+    <Grid Background="#FF8100">
+        <Label x:Name="time" Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="299, 95, 299, 242.6" Foreground="White" FontSize="48"/>
+        <Button x:Name="start" Click="StartTimer" Content="Начать" HorizontalAlignment="Center" VerticalAlignment="Top"
+        Margin="280, 312, 402.4, 72.6" Width="100" Height="25" Background="White" Foreground="#FF8100"/>
+        <Button Content="Сброс" Click="_return" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="410, 312, 272, 72.6" Width="100" Height="25" Background="White" Foreground="#FF8100"/>
+        <TextBox x:Name="hours" Text="0" Margin="342,190,342,190" FontSize="14"/>
+        <TextBox x:Name="minuts" Text="0" Margin="343,225,341,155" FontSize="14"/>
+        <TextBox x:Name="seconds" Text="0" Margin="343,260,341,120" FontSize="14"/>
+        <Button x:Name="watch" Click="Startwatch" Content="Секундомер" HorizontalAlignment="Center" VerticalAlignment="Top"
+            Margin="0,360,0,0" Width="100" Height="25" Background="White" Foreground="#FF8100"/>
+    </Grid>
+</Page>

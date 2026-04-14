@@ -1,0 +1,18 @@
+﻿<Window x:Class="praktika10.Windows.FindFIO"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:praktika10.Windows"
+        mc:Ignorable="d"
+        Title="Поиск по ФИО" Height="225" Width="200" MinHeight="200" MinWidth="200">
+    <Grid>
+        <Label Content="*Фамилия:" Height="25" Width="100" HorizontalAlignment="Left" Margin="10,10,90,150"/>
+        <TextBox x:Name="f_Name" Text="Кибанов" Height="20" Width="100" HorizontalAlignment="Left" Margin="10,39,10,125" />
+        <Label Content="*Имя:" Height="25" Width="100" HorizontalAlignment="Left" Margin="10,64,0,100"/>
+        <TextBox x:Name="s_Name" Text="Макар" Height="20" Width="100" HorizontalAlignment="Left" Margin="10,89,10,75" />
+        <Label Content="*Отчество:" Height="25" Width="100" HorizontalAlignment="Left" Margin="10,114,0,50"/>
+        <TextBox x:Name="l_Name" Text="Евгеньевич" Height="20" Width="100" HorizontalAlignment="Left" Margin="10,139,10,25" />
+        <Button Click="Find" Content="Найти" Height="20" Width="100" HorizontalAlignment="Left" Margin="10,164,10,0"/>
+    </Grid>
+</Window>

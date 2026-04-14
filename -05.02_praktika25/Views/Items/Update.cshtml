@@ -1,0 +1,54 @@
+﻿@using praktika22.Data.Models
+@using praktika22.Data.ViewModell
+
+@model VMItems
+
+@{
+	Layout = "_Layout";
+}
+
+@{
+	foreach (var item in Model.Items)
+	{
+		<div class="item">
+			<img src="@item.Img" />
+			<div class="data">
+				<form method="post" enctype="multipart/form-data">
+					<div>
+						Наименование:
+						<br><input name="name" value="@item.Name" required placeholder="Наименование:" />
+					</div>
+					<div>
+						Описание:
+						<br><input name="description" value="@item.Description" required placeholder="Описание:" />
+					</div>
+					<div>
+						<label for="file">Изображение</label>
+						<br><input name="files" required type="file" />
+					</div>
+					<div>
+						Стоимость:
+						<br><input name="price" required value="@item.Price.ToString("c")" />
+					</div>
+					<div>
+						Категория:
+						<br><select name="idCategory">
+							<option value="@item.Category.Id">@item.Category.Name</option>
+							@{
+								foreach (var Category in Model.Categorys)
+								{
+									if (Category.Id != item.Category.Id)
+									{
+										<option value="@Category.Id">@Category.Name</option>
+									}
+								}
+							}
+						</select>
+					</div>
+					<input type="hidden" name="idItem" value="@item.Id" />
+					<input type="submit" value="Изменить"/>
+				</form>
+			</div>
+		</div>
+	}
+}

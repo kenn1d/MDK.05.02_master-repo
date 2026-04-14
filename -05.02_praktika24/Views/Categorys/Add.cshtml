@@ -1,0 +1,20 @@
+﻿@using praktika22.Data.Models
+
+@model IEnumerable<Categorys>
+
+@{
+	Layout = "_Layout";
+}
+
+<h2>Добавьте категорию:</h2>
+<form method="post" enctype="multipart/form-data">
+	<div>
+		Наименование:
+		<br><input name="Name" required placeholder="Наименование:" />
+	</div>
+	<div>
+		Описание:
+		<br><input name="Desc" required placeholder="Описание:" />
+	</div>
+	<input type="submit" />
+</form>

@@ -1,0 +1,74 @@
+﻿@using praktika22.Data.DataBase
+@using praktika22.Data.ViewModell
+@using praktika22.Data.Models
+
+@model VMItems
+
+@{
+	Layout = "_Layout";
+
+	var AllItems = Model.Items;
+	var SortItems = AllItems;
+
+	int categoryType = Model.SelectCategory;
+	string sortType = Context.Request.Query["sort"].ToString();
+	string searchText = Context.Request.Query["search"].ToString();
+
+	if (searchText != "") AllItems = new DBItems().FindItems(searchText);
+	else if (sortType == "asc") AllItems = SortItems.Where(x => x.Category.Id == categoryType).OrderByDescending(x => x.Price);
+	else if (sortType == "desc") AllItems = SortItems.Where(x => x.Category.Id == categoryType).OrderBy(x => x.Price);
+	else AllItems = SortItems.Where(x => x.Category.Id == categoryType);
+
+}
+<div>
+	<select onchange="SelectCategory(this)">
+		<option value="0">
+			Выбрать ...
+		</option>
+		@{
+			foreach (var Category in Model.Categorys){
+				if (Category.Id == categoryType) {
+					<option selected="selected" value="@Category.Id">@Category.Name</option>
+				}
+				else {
+					<option value="@Category.Id">@Category.Name</option>
+				}
+			}
+		}
+	</select>
+	<input type='button' value='По убыванию' onclick="downPrice()"/>
+	<input type='button' value='По возрастанию' onclick="upPrice()"/>
+	<script>
+		function SelectCategory(sender) {
+			window.location = "/Items/List?id=" + sender.value;
+		}
+
+		function downPrice() {
+			window.location = "/Items/List?id=@Model.SelectCategory&sort=asc";
+		}
+
+		function upPrice() {
+			window.location = "/Items/List?id=@Model.SelectCategory&sort=desc";
+		}
+
+		function search(event, sender) {
+			if(event.key === 'Enter')
+				window.location = "/Items/List?search=" + sender.value;
+		}
+	</script>
+</div>
+<h2>Все предметы</h2>
+@{
+	foreach (var item in AllItems)
+	{
+		<div class="item">
+			<img src="@item.Img"/>
+			<div class="data">
+				<h3>Модель: @item.Name</h3>
+				<p>Цена: @item.Price.ToString("c")</p>
+				<p>Категория: @item.Category.Name</p>
+				<p>Описание: @item.Description</p>
+			</div>
+		</div>
+	}
+}

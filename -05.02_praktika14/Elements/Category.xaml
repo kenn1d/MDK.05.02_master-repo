@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="praktika14.Elements.Category"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:praktika14.Elements"
+             mc:Ignorable="d">
+    <Grid Width="200">
+        <Button Click="NextPage" Background="White" Margin="25,5,25,5">
+            <Label Name="namecat" Content="Категория" Foreground="Black" HorizontalContentAlignment="Center"
+       VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold"/>
+        </Button>
+    </Grid>
+</UserControl>

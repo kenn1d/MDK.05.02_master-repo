@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" href="~/css/Style.css"/>
+	<title>@ViewBag.Title</title>
+</head>
+<body>
+	<div>
+		<div class="header">
+			<img src="~/img/icon.png"/>
+			<input class="search" placeholder="Поиск по сайту" onkeydown="search(event, this)"/>
+			<img class="basket" src="~/img/ic-basket.png" />
+		</div>
+	</div>
+	<div>
+		@RenderBody()
+	</div>
+</body>

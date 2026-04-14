@@ -1,0 +1,14 @@
+﻿<Window x:Class="praktika4.Elements.FindWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:praktika4.Elements"
+        mc:Ignorable="d"
+        Title="Найденная информация" Height="250" Width="400">
+    <Grid Background="#35363A">
+        <Label x:Name="inf_fio" Content="ФИО:" FontSize="14" FontFamily="Arial Narrow" Foreground="White" Margin="10,30,10,130"/>
+        <Label x:Name="inf_step" Content="Стипендия:" FontSize="14" FontFamily="Arial Narrow" Foreground="White" Margin="10,78,10,82"/>
+        <Label x:Name="inf_course" Content="Курс:" FontSize="14" FontFamily="Arial Narrow" Foreground="White" Margin="10,128,10,30"/>
+    </Grid>
+</Window>

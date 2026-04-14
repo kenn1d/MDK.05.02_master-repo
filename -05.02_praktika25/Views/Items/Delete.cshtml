@@ -1,0 +1,23 @@
+﻿@using praktika22.Data.Models
+
+@model IEnumerable<Items>
+
+@{
+	Layout = "_Layout";
+}
+
+<form method="post" enctype="multipart/form-data">
+	<div>
+		Товар:
+		<br><select name="idItem">
+			<option>Выберите ...</option>
+			@{
+				foreach (var item in Model)
+				{
+					<option value="@item.Id">@item.Name</option>
+				}
+			}
+		</select>
+	</div>
+	<input type="submit" value="Удалить"/>
+</form>

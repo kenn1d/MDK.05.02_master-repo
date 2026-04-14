@@ -1,0 +1,34 @@
+﻿<Page x:Class="praktika12.Pages.Statement"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika12.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="410" d:DesignWidth="792"
+      Title="Statement">
+
+    <Grid Background="#f8f9fa">
+        <Grid Margin="0,0,0,349.6" Background="White">
+            <Image HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" Source="/Submission of Applications;component/logo.png"/>
+            <Label Content="Электронная приёмная компания" HorizontalAlignment="Left" Margin="55,1,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="19"/>
+            <Label Content="Пермского авиационного техникума им. А. Д. Швецова" HorizontalAlignment="Left" Margin="55,24,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid Margin="0,60,0,0">
+            <Label Content="Заявление" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Content="Прошу принять меня в КГАПОУ Пермский авиационный техникум им. А. Д. Швецова" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+            <Label Content="Выберите один из вариантв:" HorizontalAlignment="Left" Margin="20,67,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="10" Foreground="Red"/>
+            <CheckBox Content="по очной форме обучения" HorizontalAlignment="Left" Margin="22,91,0,0" VerticalAlignment="Top"/>
+            <CheckBox Content="по заочной форме обучения (обучение только на платной основе)" HorizontalAlignment="Left" Margin="22,106,0,0" VerticalAlignment="Top"/>
+            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="20,126,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="10" Foreground="Red"/>
+            <CheckBox Content="за счёт буджета" HorizontalAlignment="Left" Margin="22,165,0,0" VerticalAlignment="Top"/>
+            <CheckBox Content="по договору (платно)" HorizontalAlignment="Left" Margin="22,150,0,0" VerticalAlignment="Top"/>
+            <Label Content="О себе сообщаю следующее:" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top"/>
+            <Label Content="Окончил (Наименование образовательной организации, город)" HorizontalAlignment="Left" Margin="10,211,0,0" VerticalAlignment="Top"/>
+            <TextBox Height="24" Margin="12,237,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+            <Label Content="Год окончания образовательной организации" HorizontalAlignment="Left" Margin="12,266,0,0" VerticalAlignment="Top"/>
+            <TextBox Height="24" Margin="12,291,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+            <Button Click="next" Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25"/>
+        </Grid>
+    </Grid>
+</Page>

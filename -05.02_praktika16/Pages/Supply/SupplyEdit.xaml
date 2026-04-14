@@ -1,0 +1,211 @@
+﻿<Page x:Class="praktika16.Pages.Supply.SupplyEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktika16.Pages.Supply"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SupplyEdit">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Text="Добавление/редактирование поставки"
+                   FontSize="24"
+                   FontWeight="SemiBold"
+                   Foreground="#1565C0"
+                   HorizontalAlignment="Center"
+                   Margin="0,30,0,20"/>
+
+        <Grid Grid.Row="1"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Top"
+              Width="600"
+              Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.Column="0" Margin="10,0,10,20">
+                <TextBlock Text="Дата"
+                           FontSize="14"
+                           Foreground="#1565C0"
+                           Margin="0,0,0,5"/>
+                <DatePicker Name="DatePicker"
+                            Background="White"
+                            BorderBrush="#64B5F6"
+                            BorderThickness="1"
+                            Padding="5"
+                            FontSize="14"
+                            Foreground="#212121"
+                            Height="40"
+                            VerticalContentAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="10,0,10,20">
+                <TextBlock Text="Документ"
+                           FontSize="14"
+                           Foreground="#1565C0"
+                           Margin="0,0,0,5"/>
+                <ComboBox Name="DocumentComboBox"
+                          Background="White"
+                          BorderBrush="#64B5F6"
+                          BorderThickness="1"
+                          Padding="10,0,10,0"
+                          FontSize="14"
+                          Foreground="#212121"
+                          Height="40"
+                          VerticalContentAlignment="Center">
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Grid.Column="0" Margin="10,0,10,0">
+                <TextBlock Text="Статус"
+                           FontSize="14"
+                           Foreground="#1565C0"
+                           Margin="0,0,0,5"/>
+                <ComboBox Name="StatusComboBox"
+                          Background="White"
+                          BorderBrush="#64B5F6"
+                          BorderThickness="1"
+                          Padding="10,0,10,0"
+                          FontSize="14"
+                          Foreground="#212121"
+                          Height="40"
+                          VerticalContentAlignment="Center">
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="1" Margin="10,0,10,20">
+                <TextBlock Text="Поставщик"
+                           FontSize="14"
+                           Foreground="#1565C0"
+                           Margin="0,0,0,5"/>
+                <ComboBox Name="SupplierComboBox"
+                          Background="White"
+                          BorderBrush="#64B5F6"
+                          BorderThickness="1"
+                          Padding="10,0,10,0"
+                          FontSize="14"
+                          Foreground="#212121"
+                          Height="40"
+                          VerticalContentAlignment="Center">
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="10,0,10,20">
+                <TextBlock Text="Руководитель"
+                           FontSize="14"
+                           Foreground="#1565C0"
+                           Margin="0,0,0,5"/>
+                <ComboBox Name="ManagerComboBox"
+                          Background="White"
+                          BorderBrush="#64B5F6"
+                          BorderThickness="1"
+                          Padding="10,0,10,0"
+                          FontSize="14"
+                          Foreground="#212121"
+                          Height="40"
+                          VerticalContentAlignment="Center">
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Grid.Column="1" Margin="10,0,10,0">
+                <TextBlock Text="Работник"
+                           FontSize="14"
+                           Foreground="#1565C0"
+                           Margin="0,0,0,5"/>
+                <ComboBox Name="WorkerComboBox"
+                          Background="White"
+                          BorderBrush="#64B5F6"
+                          BorderThickness="1"
+                          Padding="10,0,10,0"
+                          FontSize="14"
+                          Foreground="#212121"
+                          Height="40"
+                          VerticalContentAlignment="Center">
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2" 
+              Height="70" 
+              Background="Transparent"
+              Margin="10">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom">
+
+                <Button Name="SaveButton"
+                        Content="Сохранить"
+                        Background="#2196F3"
+                        Foreground="White"
+                        BorderThickness="0"
+                        FontSize="14"
+                        FontWeight="SemiBold"
+                        Width="120"
+                        Height="40"
+                        Margin="0,0,10,0"
+                        Padding="0"
+                        Cursor="Hand">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#2196F3"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#1976D2"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button Name="CancelButton"
+                        Content="Отмена"
+                        Background="#F44336"
+                        Foreground="White"
+                        BorderThickness="0"
+                        FontSize="14"
+                        FontWeight="SemiBold"
+                        Width="120"
+                        Height="40"
+                        Padding="0"
+                        Cursor="Hand">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#F44336"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#D32F2F"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

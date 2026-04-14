@@ -1,0 +1,21 @@
+﻿@using praktika22.Data.Models
+
+@model IEnumerable<Categorys>
+
+@{
+	Layout = "_Layout";
+}
+
+<h2>Выберите категорию для удаления:</h2>
+<form method="post" enctype="multipart/form-data">
+	<select name ="Id">
+		<option>Выберите ...</option>
+		@{
+			foreach(var category in Model)
+			{
+				<option value="@category.Id">@category.Name</option>
+			}		
+		}
+	</select>
+	<br><br><input type="submit" value="Удалить" />
+</form>

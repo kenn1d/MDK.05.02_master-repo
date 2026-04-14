@@ -1,0 +1,38 @@
+﻿<Window x:Class="praktika10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:praktika10"
+        mc:Ignorable="d"
+        Title="Паспортный стол" Height="450" Width="800" MinHeight="450" MinWidth="800">
+    <Grid>
+        <ListView x:Name="lv_passport" Margin="10,10,10,40">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Имя" Width="100" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Фамилия" Width="100" DisplayMemberBinding="{Binding FirstName}"/>
+                    <GridViewColumn Header="Отчество" Width="100" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn Header="Паспорт" Width="100" DisplayMemberBinding="{Binding Issued}"/>
+                    <GridViewColumn Header="Дата выдачи" Width="100" DisplayMemberBinding="{Binding DateOfIssued}"/>
+                    <GridViewColumn Header="Код подразделения" Width="100" DisplayMemberBinding="{Binding DepartmentCode}"/>
+                    <GridViewColumn Header="Серия и номер" Width="100" DisplayMemberBinding="{Binding SeriesAndNumber}"/>
+                    <GridViewColumn Header="Дата рождения" Width="100" DisplayMemberBinding="{Binding DateOfBirth}"/>
+                    <GridViewColumn Header="Место рождения" Width="100" DisplayMemberBinding="{Binding PlaceOfBirth}"/>
+                    <GridViewColumn Header="Фото паспорта" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding PhotoPassport}" Width="100" Height="80"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Click="Add" Content="Добавить" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="75" Height="25"/>
+        <Button Click="Update" Content="Изменить" HorizontalAlignment="Right" Margin="0,0,90,10" VerticalAlignment="Bottom" Width="75" Height="25"/>
+        <Button Click="Delete" Content="Удалить" HorizontalAlignment="Right" Margin="0,0,170,10" VerticalAlignment="Bottom" Width="75" Height="25"/>
+        <Button Click="Find" Content="Найти" HorizontalAlignment="Right" Margin="0,0,250,10" VerticalAlignment="Bottom" Width="75" Height="25"/>
+        <Button Click="Return" Content="Обновить" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="75" Height="25"/>
+    </Grid>
+</Window>

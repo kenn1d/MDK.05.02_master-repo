@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="praktika18.Element.Item"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:praktika18.Element"
+             mc:Ignorable="d" >
+    <Grid Background="#e4e4e4" Margin="0,10,0,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lPrice" Content="1999 ₽" Margin="10,30,10,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center" FontSize="20"/>
+        <Button Content="Подробнее" Background="#FF4000" HorizontalAlignment="Center" Margin="0,72,0,0" VerticalAlignment="Top" Width="100" Foreground="White" BorderBrush="#FFFF4000"/>
+        <Label Content="Победа" Margin="10,10,10,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="fromTime" Content="05:00" Margin="10,40,10,0" VerticalAlignment="Top" Grid.Column="1" FontSize="16"/>
+        <Label x:Name="fromDate" Content="09.12.2025" Margin="10,76,10,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="from" Content="Пермь" Margin="10,107,10,0" VerticalAlignment="Top" Grid.Column="1"/>
+
+        <Image Grid.Column="2" Height="30" Width="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="9.6,35,0,0" Source="/Image/icons8-взлет-самолета-50.png"/>
+        <Image Grid.Column="2" Height="30" VerticalAlignment="Top"  Margin="0,35,5,0" Source="/Image/icons8-посадка-самолета-50.png" HorizontalAlignment="Right" Width="30"/>
+        <Grid Grid.Column="2" Background="#939393" Height="5" Margin="5,70,5,0" VerticalAlignment="Top"/>
+
+        <Label Content="Победа" Margin="10,10,10,0" VerticalAlignment="Top" Grid.Column="3"/>
+        <Label x:Name="toTime" Content="05:00" Margin="10,40,10,0" VerticalAlignment="Top" Grid.Column="3" FontSize="16"/>
+        <Label x:Name="toDate" Content="09.12.2025" Margin="10,76,10,0" VerticalAlignment="Top" Grid.Column="3"/>
+        <Label x:Name="to" Content="Пермь" Margin="10,107,10,0" VerticalAlignment="Top" Grid.Column="3"/>
+
+        <Label x:Name="way" Content="в пути 2 часа 55 минут" Margin="45,35,45,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Grid.Column="2"/>
+
+    </Grid>
+</UserControl>

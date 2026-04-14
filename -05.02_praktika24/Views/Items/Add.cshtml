@@ -1,0 +1,35 @@
+﻿@using praktika22.Data.Models
+@model IEnumerable<Categorys>
+@{
+	Layout = "_Layout";
+}
+
+<form method="post" enctype="multipart/form-data">
+	<div>
+		Наименование:
+		<br><input name="name" required placeholder="Наименование:" />
+	</div>
+	<div>
+		Описание:
+		<br><input name="description" required placeholder="Описание:" />
+	</div>
+	<div>
+		<label for="file">Изображение</label>
+		<br><input name="files" required type="file" />
+	</div>
+	<div>
+		Стоимость:
+		<br><input name="price" required />
+	</div>
+	<div>
+		Категория:
+		<br><select name="idCategory">
+			@{
+				foreach (var Category in Model) {
+					<option value="@Category.Id">@Category.Name</option>
+				}
+			}
+		</select>
+	</div>
+	<input type="submit" />
+</form>

@@ -1,0 +1,24 @@
+﻿@using praktika22.Data.Models
+
+@model IEnumerable<Categorys>
+
+@{
+	Layout = "_Layout";
+}
+
+<h2>Отредактируйте категорию:</h2>
+@{
+	foreach (var category in Model)
+	{
+		<div class="item">
+			<form method="post" enctype="multipart/form-data">
+				<label for="name">Наименование:</label>
+				<input id="name" type="text" name="name" value="@category.Name" /><br>
+				<label for="desc">Описание</label>
+				<input id="desc" type="text" name="desc" value="@category.Description" /><br>
+				<input type="hidden" name="id" value="@category.Id" />
+				<input type="submit" value="Изменить" />
+			</form>
+		</div>
+	}
+}

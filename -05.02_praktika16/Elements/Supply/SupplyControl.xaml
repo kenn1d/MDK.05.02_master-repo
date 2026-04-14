@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="praktika16.Elements.Supply.SupplyControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:praktika16.Elements.Supply"
+             mc:Ignorable="d">
+    <Grid Margin="10" Background="White" Width="800" Height="80">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        
+        <Image Source="/Images/inventory.png" Margin="5"/>
+
+        <StackPanel Grid.Column="1" Margin="5">
+            <Label Content="Дата"
+               FontWeight="Bold"
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               Padding="0,2,0,0"/>
+            <Label Content="01.01.2023"
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               FontStyle="Italic"
+               Padding="0,0,0,2"/>
+
+            <Label Content="Документ"
+               FontWeight="Bold"
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               Padding="0,2,0,0"/>
+            <Label Content="1111111"
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               FontStyle="Italic"
+               Padding="0,0,0,2"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Margin="5">
+            <Label Content="Статус"
+               FontWeight="Bold"
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               Padding="0,2,0,0"/>
+            <Label Content="Доставлено"
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               FontStyle="Italic"
+               Padding="0,0,0,2"/>
+
+            <Label Content="Поставщик"
+               FontWeight="Bold"
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               Padding="0,2,0,0"/>
+            <Label Content="ООО 'Поставщик'"
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               FontStyle="Italic"
+               Padding="0,0,0,2"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3" Margin="5">
+            <Label Content="Руководитель"
+               FontWeight="Bold"
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               Padding="0,2,0,0"/>
+            <Label Content="Петров П.П."
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               FontStyle="Italic"
+               Padding="0,0,0,2"/>
+
+            <Label Content="Работник"
+               FontWeight="Bold"
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               Padding="0,2,0,0"/>
+            <Label Content="Сидоров С.С."
+               FontSize="10"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Left"
+               FontStyle="Italic"
+               Padding="0,0,0,2"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="4" Margin="5">
+            <Button Content="Изменить"
+                Height="19"
+                Margin="5"
+                VerticalAlignment="Top"
+                Background="White"
+                BorderBrush="White" 
+                Foreground="#FF009CFF"/>
+            <Button Content="Удалить"
+                Height="19" 
+                Margin="5"
+                VerticalAlignment="Bottom"
+                Background="White"
+                BorderBrush="White" 
+                Foreground="Red"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
