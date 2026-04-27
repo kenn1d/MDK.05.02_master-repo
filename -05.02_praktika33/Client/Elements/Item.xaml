@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Client.Elements.Item"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Client.Elements"
+             mc:Ignorable="d" 
+             Background="FloralWhite">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Наименование:" Height="25" VerticalAlignment="Top" Margin="10,0,10,0" Grid.Column="0"/>
+        <TextBox x:Name="tbName" Height="25" VerticalAlignment="Top" Margin="10,25,10,0" Grid.Column="0"/>
+        <Label Content="Ссылка на сайт:" Height="25" VerticalAlignment="Top" Margin="10,50,10,0" Grid.Column="0"/>
+        <TextBox x:Name="tbUrl" Height="25" VerticalAlignment="Top" Margin="10,75,10,0" Grid.Column="0"/>
+
+        <Label Content="Логин:" Height="25" VerticalAlignment="Top" Margin="10,0,10,0" Grid.Column="1"/>
+        <TextBox x:Name="tbLogin" Height="25" VerticalAlignment="Top" Margin="10,25,10,0" Grid.Column="1"/>
+        <Label Content="Пароль:" Height="25" VerticalAlignment="Top" Margin="10,50,10,0" Grid.Column="1"/>
+        <TextBox x:Name="tbPassword" Height="25" VerticalAlignment="Top" Margin="10,75,10,0" Grid.Column="1"/>
+
+        <Button Click="Update" Content="Изменить" Height="25" Margin="0,25,0,0" VerticalAlignment="Top"
+        HorizontalAlignment="Center" Grid.Column="2"/>
+        <Button Click="Delete" Content="Удалить" Height="25" VerticalAlignment="Top"
+            HorizontalAlignment="Center" Margin="0,75,0,0" Grid.Column="2"/>
+    </Grid>
+</UserControl>

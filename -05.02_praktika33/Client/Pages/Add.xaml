@@ -1,0 +1,33 @@
+﻿<Page x:Class="Client.Pages.Add"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="White"
+      Title="Add">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Наименование:" Height="25" VerticalAlignment="Top" Margin="10,0,10,0" Grid.Column="0"/>
+        <TextBox x:Name="tbName" Height="25" VerticalAlignment="Top" Margin="10,25,10,0" Grid.Column="0"/>
+        <Label Content="Ссылка на сайт:" Height="25" VerticalAlignment="Top" Margin="10,50,10,0" Grid.Column="0"/>
+        <TextBox x:Name="tbUrl" Height="25" VerticalAlignment="Top" Margin="10,75,10,0" Grid.Column="0"/>
+
+        <Label Content="Логин:" Height="25" VerticalAlignment="Top" Margin="10,0,10,0" Grid.Column="1"/>
+        <TextBox x:Name="tbLogin" Height="25" VerticalAlignment="Top" Margin="10,25,10,0" Grid.Column="1"/>
+        <Label Content="Пароль:" Height="25" VerticalAlignment="Top" Margin="10,50,10,0" Grid.Column="1"/>
+        <TextBox x:Name="tbPassword" Height="25" VerticalAlignment="Top" Margin="10,75,10,0" Grid.Column="1"/>
+
+        <Button Click="Save" Content="Сохранить" Height="25" Width="100" Margin="10" VerticalAlignment="Bottom"
+                HorizontalAlignment="Left"/>
+        <Button Click="Back" Content="Отмена" Height="25" Width="100" VerticalAlignment="Bottom"
+        HorizontalAlignment="Left" Margin="115,0,0,10"/>
+    </Grid>
+</Page>
