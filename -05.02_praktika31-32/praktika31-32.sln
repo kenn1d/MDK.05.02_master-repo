@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11626.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "praktika31-32", "praktika31-32.csproj", "{B43C0314-E87B-4588-9463-EE84B519ABA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{132954CF-C524-48DE-9E77-B265E03CF810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeWPF", "SnakeWPF\SnakeWPF.csproj", "{6D8BB8A6-AA5A-45A2-ABF2-FCEFBF38F47B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B43C0314-E87B-4588-9463-EE84B519ABA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43C0314-E87B-4588-9463-EE84B519ABA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43C0314-E87B-4588-9463-EE84B519ABA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43C0314-E87B-4588-9463-EE84B519ABA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{132954CF-C524-48DE-9E77-B265E03CF810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{132954CF-C524-48DE-9E77-B265E03CF810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{132954CF-C524-48DE-9E77-B265E03CF810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{132954CF-C524-48DE-9E77-B265E03CF810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D8BB8A6-AA5A-45A2-ABF2-FCEFBF38F47B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D8BB8A6-AA5A-45A2-ABF2-FCEFBF38F47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D8BB8A6-AA5A-45A2-ABF2-FCEFBF38F47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D8BB8A6-AA5A-45A2-ABF2-FCEFBF38F47B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEDC7247-26C5-4129-B62E-B1277FF52713}
+	EndGlobalSection
+EndGlobal

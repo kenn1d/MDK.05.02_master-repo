@@ -1,0 +1,17 @@
+﻿<Page x:Class="SnakeWPF.Pages.Game"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SnakeWPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Game">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\student-a502.PERMAVIAT\Documents\kib\-05.02_praktika31-32\SnakeWPF\Image\background_3.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Canvas Name="canvas"></Canvas>
+    </Grid>
+</Page>

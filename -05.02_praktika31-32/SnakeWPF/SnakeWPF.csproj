@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Image\Apple.png" />
+    <None Remove="Image\background.jpg" />
+    <None Remove="Image\background_2.jpg" />
+    <None Remove="Image\background_3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\Apple.png" />
+    <Resource Include="Image\background.jpg" />
+    <Resource Include="Image\background_2.jpg" />
+    <Resource Include="Image\background_3.jpg" />
+  </ItemGroup>
+
+</Project>
